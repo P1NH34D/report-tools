@@ -70,9 +70,16 @@ public class ReportGenerator {
     }
 
     private String generateFileName(ReportParameter parameters){
-        SimpleDateFormat dataFormat = new SimpleDateFormat("yyyyMMdd");
-        return parameters.getReportName() + "_" + dataFormat.format(new Date()) +
-                "." + parameters.getExtension();
+        SimpleDateFormat dataFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        StringBuilder filename = new StringBuilder(parameters.getReportName());
+
+        if(parameters.isUnique()){
+            filename.append("_").append(dataFormat.format(new Date()));
+        }
+
+        filename.append(".").append(parameters.getExtension());
+
+        return filename.toString();
     }
 
 }

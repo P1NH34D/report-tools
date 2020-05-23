@@ -17,5 +17,6 @@ import java.util.List;
 public class ReportParameter {
     private String reportName;
     private String extension;
+    private boolean unique;
     private List<? extends Reportable> data;
 }
