@@ -112,7 +112,7 @@
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
         <poi.version>4.1.0</poi.version>
         <java.version>1.8</java.version>
-        <junit-version>4.11</junit-version>
+        <junit-version>4.13.1</junit-version>
     </properties>
 
 </project>
